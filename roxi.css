@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050505;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: #ff0077;
+    text-shadow: 0 0 10px #ff0077;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff0077;
+}
+
+.hero {
+    height: 100vh;
+
+    background:
+    linear-gradient(to bottom,
+    rgba(255, 252, 252, 0.4),
+    rgba(0,0,0,0.9)),
+    url("images/roxi-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    background: #ff0077;
+
+    filter: blur(180px);
+    opacity: 0.25;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.mini-title {
+    letter-spacing: 4px;
+    color: #ff8fc7;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: 10px;
+
+    color: white;
+
+    text-shadow:
+    0 0 20px #ff0077,
+    0 0 40px #ff0077;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #d8d8d8;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 14px 35px;
+
+    border: 2px solid #ff0077;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff0077;
+    box-shadow: 0 0 25px #ff0077;
+}
+
+.about {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    padding: 100px 10%;
+}
+
+.text {
+    max-width: 500px;
+}
+
+.text h2 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+
+    color: #ff0077;
+}
+
+.text p {
+    line-height: 1.8;
+    color: #cccccc;
+}
+
+.image-box img {
+    width: 350px;
+
+    border-radius: 20px;
+
+    box-shadow:
+    0 0 30px rgba(255,0,119,0.5);
+}
+
+.cards-section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.cards-section h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;
+
+    color: #ff0077;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.card {
+    background: #111;
+
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #2c2c2c;
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: #ff0077;
+
+    box-shadow:
+    0 0 25px rgba(255,0,119,0.3);
+}
+
+.card h3 {
+    margin-bottom: 20px;
+
+    color: #ff0077;
+}
+
+.card p {
+    color: #cfcfcf;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+
+    padding: 40px;
+
+    border-top: 1px solid #222;
+
+    color: #888;
+}
+
+@media(max-width: 900px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-box img {
+        width: 280px;
+    }
+}
